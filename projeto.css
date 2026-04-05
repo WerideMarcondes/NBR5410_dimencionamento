@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: darkslategray;
   
 }
 .btn {
@@ -8,6 +9,24 @@ body {
   font-size: 20px;
   font-weight: bolder;
 }
+
+.btnModal{
+ width: 200px;
+}
+
+.modal-body{
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-align: center;
+}
+
+.modal-title{
+  text-align: center;
+  font-size: 26px;
+}
+
+
 a {
   text-decoration: none;
   color: black;
@@ -29,6 +48,7 @@ a {
   gap: 15px;
   width: 50%;
   background-color: white;
+  border-radius: 30px;
 }
 .resultados{
 text-align: center;
@@ -39,6 +59,10 @@ align-items: center;
   width: 250px;
   height: 25px;
   font-size: 15px;
+}
+
+.input-group {
+  margin-top: 15px;
 }
 
 .data {
@@ -78,4 +102,5 @@ align-items: center;
 .row{
 margin: 0;
 justify-content: center;
+margin-bottom: 10px;
 }

@@ -78,6 +78,7 @@ function novo_Projeto() {
   document.getElementById("watts").value = innerHTML = "";
   document.getElementById("quantidade").value = innerHTML = "";
   document.getElementById("correnteProjeto").value = innerHTML = "";
+  document.getElementById("circuito").value = innerHTML = "";
 
   var inputAll = document.querySelectorAll(".entrada");
   for (var i = 0; i < inputAll.length; i++) {
@@ -1363,6 +1364,18 @@ function salvar() {
     chave++;
     localStorage.setItem(chave, JSON.stringify(Array));
     console.log(Array);
-  }
+      Swal.fire({
+    title: "Pojeto Salvo com sucesso",
+    text: "",
+    icon: "success",
+  });
+  }else{
+   Swal.fire({
+    title: "Voce deve preencher todas as lacunas para salvar seu projeto",
+    text: "Oops...",
+    icon: "error",
+  });
+}
+  
 }
 

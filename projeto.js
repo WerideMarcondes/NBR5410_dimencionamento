@@ -86,11 +86,20 @@ function export_PDF() {
     icon: "error",
   });
 }
-
-
 }
 
 function apagar_dados(){
   localStorage.clear();
+     Swal.fire({
+    title: "Pojeto Deletado com sucesso",
+    text: "",
+    icon: "success",
+  });
+
+
+  setInterval(function () {
+ window.location.reload();
+}, 1000);
+  
 
 }

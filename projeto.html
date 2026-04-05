@@ -109,10 +109,56 @@
            <button
           type="button"
           class="btn btn-danger pdf"
-          onclick=" apagar_dados()"
+          data-bs-toggle="modal" data-bs-target="#deletar"
         >
           Apagar dados
         </button>
+      </div>
+
+       <!-- Modal -->
+      <div
+        class="modal fade"
+         id="deletar"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Voce tem certeza que quer deletar seu Projeto?
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+               <button
+                type="button"
+                class="btn btnModal btn-warning"
+                data-bs-dismiss="modal"
+                onclick="apagar_dados()"
+              >
+                Sim
+              </button>
+                 <button
+                type="button"
+                class="btn btnModal btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Nao
+              </button>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="/projeto.js"></script>
