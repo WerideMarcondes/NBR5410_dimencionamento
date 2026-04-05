@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    margin: 0; /* Remove margens padrão do body */
+    background-color: rgb(66, 68, 65);
+  }
+
+.input-group {
+  width: 250px;
+  text-align: center;
+  padding: 3px;
+  
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(66, 68, 65);
+  width: 2000px;
+  height: 500px;
+}
+.input-group {
+ width: 230px;
+
+}
+.input-group-text{
+font-size: 14px;
+font-weight: bold;
+
+}
+
+
+.form-control {
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  color: red;
+}
+.infor {
+  color: white;
+  font-size: 16px;
+}
+
+.form-check-label {
+  font-size: 13px;
+}
+/*Selects */
+#tipoDispositivo{
+  width: 250px;
+font-weight: bolder;
+
+}
+
+#selectCondutores{
+width: 250px;
+font-weight: bolder;
+
+}
+
+select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+option{
+  font-weight: bolder;
+}
+.btn{
+width: 220px;
+}
+
+.buttons{
+  width:900px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  height: 50px;
+}
+
+label{
+  color: white;
+  font-weight: bolder;
+}
+
+
+.AB1 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/img/img\ a1\ b1.png");
+  justify-content: center;
+}
+
+.B2C {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/img/image\ b2\ a\ c.png");
+  justify-content: center;
+}
+
+.C{
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  background-image: url("/img/C.png");
+  justify-content: center;
+}
+
+.CEF {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/img/C\ E\ D.png");
+  justify-content: center;
+}
+
+.modal-content {
+  height: 500px;
+  width: 500px;
+  margin-left: auto; /* aqui */
+  margin-right: auto; /* e aqui */
+}
+
+a {
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+color: black;
+}

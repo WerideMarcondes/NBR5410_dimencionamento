@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+.btn {
+  width: 300px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.pdf a {
+  color: white;
+}
+
+.footer {
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+}
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 15px;
+  width: 50%;
+  background-color: white;
+}
+.resultados{
+text-align: center;
+align-content: center;
+align-items: center;
+}
+.nome_projeto {
+  width: 250px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.data {
+  width: 200px;
+  text-align: center;
+  height: 25px;
+}
+
+#inputGroup-sizing-sm {
+  font-size: 15px;
+  height: 25px;
+}
+
+.tabelas {
+    width: 30% !important; /*Importante manter o !important rs */
+    margin: 0px;
+}
+
+.tabelas th {
+  font-size: 10px;
+  padding: 20px; /* Espaçamento interno (dentro da célula) */
+  border: 1px solid black;
+}
+
+.tabelas th::first-letter {
+  text-transform: uppercase;
+  
+}
+
+.tabelas td {
+  font-weight: bolder;
+  border: 1px solid black;
+   font-size: 12px;
+  color: red;
+}
+
+.row{
+margin: 0;
+justify-content: center;
+}

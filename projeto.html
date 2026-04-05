@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- biblioteca do fremework sweetalert-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- gerar PDF -->
+       <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="/projeto.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid resultados">
+        <div class="row">
+        <div class="nome_projeto input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Projeto</span
+          >
+          <input
+            type="text"
+            class="form-control nome_projeto"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            id="nomeProjeto"
+          />
+        </div>
+
+          <div class="nome_projeto input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Executor</span
+          >
+          <input
+            type="text"
+            class="form-control nome_projeto"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            id="executor"
+          />
+        </div>
+        
+        <div class="data input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Data</span>
+          <input
+            type="text"
+            class="form-control data nome_projeto"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            id="date"
+          />
+        </div>
+        <table class="tabelas">
+        </table>
+       
+        </div>
+        </div>
+    </header>
+
+    <footer>
+      <div class="container-fluid footer">
+        <button type="button" class="btn btn-warning">
+          <a href="/index.html"> Voltar pagina projeto</a>
+        </button>
+        <button
+          type="button"
+          class="btn btn-success pdf"
+          onclick="export_PDF()"
+        >
+          Salvar PDF
+        </button>
+           <button
+          type="button"
+          class="btn btn-danger pdf"
+          onclick=" apagar_dados()"
+        >
+          Apagar dados
+        </button>
+      </div>
+    </footer>
+    <script src="/projeto.js"></script>
+  </body>
+</html>

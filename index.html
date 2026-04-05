@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELETRICT"</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- biblioteca do fremework sweetalert-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="row">
+                <div class="input-group">
+            <input
+              id="circuito"
+              aria-label="First name"
+              class="form-control entrada"
+            /><span class="input-group-text">Circuito</span>
+          </div>
+          <div class="input-group">
+            <input
+              id="watts"
+              aria-label="First name"
+              class="form-control entrada"
+            /><span class="input-group-text">Watts</span>
+          </div>
+          <div class="input-group">
+            <input
+              id="quantidade"
+              aria-label="First name"
+              class="form-control entrada"
+            /><span class="input-group-text">QTD</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              id="tensao"
+              aria-label="First name"
+              class="form-control entrada"
+              placeholder="120/220..."
+            /><span class="input-group-text">Tensão</span>
+          </div>
+          <div class="input-group">
+            <input
+              readonly
+              id="correnteProjeto"
+              aria-label="First name "
+              class="form-control entrada"
+            /><label class="input-group-text">Corrente Projeto</label>
+          </div>
+        </div>
+        <div class="col">
+        <label >Tipo de Disposotivo
+          <select  class="form-select-sm form-select entrada"  onchange="tipo_dispositivo(this.value)" id="tipoDispositivo" aria-label=".form-select-sm example">
+            <option  value="outro">Outros</option>
+            <option  value="iluminacao"> Iluminação </option>
+            <option  value="tomada">Tomada</option>
+          </select>
+        </label>
+          <label >Condutores Carregados
+        <select  class="form-select-sm form-select entrada"  onchange="condutores_Carregados(this.value)" id="selectCondutores" aria-label=".form-select-sm example">
+          <option  value="2">Condutores Carregados 2</option>
+          <option  value="3"> Condutores Carregados 3</option>
+        </select>
+      </label>
+      </div>
+        <div class="row">
+          
+        <label>Método de instalação</label>
+        <select size="2"
+          class="form-select form-select-sm entrada"
+          aria-label=".form-select-sm example"
+          id="metodoInstalacao" onchange="metodo_Instalacao(this.value)"
+        >
+          <option value="A1">
+            (1) A1 Condutores isolados ou cabos unipolares em eletroduto de seção
+            circular embutido em parede termicamente isolante2
+          </option>
+          <option value="A2">
+            (2) A2 Cabo multipolar em eletroduto de seção circular embutido em
+            parede termicamente isolante
+          </option>
+          <option value="B1">
+            (3) B1 Condutores isolados ou cabos unipolares em eletroduto aparente
+            de seção circular sobre parede ou espaçado desta menos de 0,3 vez o
+            diâmetro do eletroduto
+          </option>
+          <option value="B2">
+            (4)  B2 Cabo multipolar em eletroduto aparente de seção circular sobre
+            parede ou espaçado desta menos de 0,3 vez o diâmetro do eletroduto
+          </option>
+
+          <option value="B1">
+            (5)  B1 Condutores isolados ou cabos unipolares em eletroduto aparente
+            de seção não-circular sobre parede
+          </option>
+          <option value="B2">
+            (6) B2 Cabo multipolar em eletroduto aparente de seção não-circular
+            sobre parede
+          </option>
+          <option value="B1">
+            (7) B1 Condutores isolados ou cabos unipolares em eletroduto de seção
+            circular embutido em alvenaria
+          </option>
+          <option value="B2">
+            (8) B2 Cabo multipolar em eletroduto de seção circular embutido em
+            alvenaria
+          </option>
+          <option value="C">
+            (11) C Cabos unipolares ou cabo multipolar sobre
+            parede ou espaçado desta menos de 0,3 vez
+            o diâmetro do cabo
+          </option>
+          <option value="C">
+            (11a) C Cabos unipolares ou cabo multipolar fixado
+            diretamente no teto
+          </option>
+          <option value="C">
+           (11b) C Cabos unipolares ou cabo multipolar afastado
+           do teto mais de 0,3 vez o diâmetro do cabo
+          </option>
+          <option value="C">
+            (12) C Cabos unipolares ou cabo multipolar em
+            bandeja não-perfurada, perfilado ou
+            prateleira
+          </option>
+          <option value="C">
+            (52) C Cabos unipolares ou cabo multipolar
+            embutido(s) diretamente em alvenaria sem
+            proteção mecânica adicional
+          </option>
+          <option value="C">
+            (53) C Cabos unipolares ou cabo multipolar
+            embutido(s) diretamente em alvenaria com
+            proteção mecânica adicional
+          </option>
+          <option value="D">
+            (61) D Cabo multipolar em eletroduto(de seção
+            circular ou não) ou em canaleta não-ventilada
+            enterrado(a)
+          </option>
+          <option value="D">
+            (61a) D Cabos unipolares em eletroduto( de seção
+            não-circular ou não) ou em canaleta nãoventilada
+            enterrado
+          </option>
+          <option value="D">
+            (63) D Cabos unipolares ou cabo multipolar
+            diretamente enterrado(s), com proteção
+            mecânica adicional
+          </option>
+       
+        </select>
+      </div>
+
+        <div class="row">
+          <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="/"
+            >Esquema ilustrativo A/B1</a
+          >
+          <a href="/" data-bs-toggle="modal" data-bs-target="#B2C"
+            >Esquema ilustrativo B2/C</a
+          >
+          <a href="/" data-bs-toggle="modal" data-bs-target="#C"
+          >Esquema ilustrativo C</a
+        >
+          
+          <a href="/" data-bs-toggle="modal" data-bs-target="#CEF"
+            >Esquema ilustrativo C/D</a
+          >
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <input
+              readonly
+              id="disjuntor"
+              aria-label="First name"
+              class="form-control"
+            /><span class="input-group-text">Disjuntor</span>
+          </div>
+          <div class="input-group">
+            <input
+              readonly
+              type="text"
+              id="cabo"
+              aria-label="First name"
+              class="form-control"
+            /><span class="input-group-text">mm²</span>
+          </div>
+        </div>
+
+  <div class="buttons">
+            <button
+              class="btn btn-primary"
+              onclick="capacidade_ConducaoCobre()"
+            >
+              Calcular
+            </button>
+             <button
+              class="btn btn-warning"
+              onclick="salvar()"
+            >
+              Salvar
+            </button>
+            <button  onclick="novo_Projeto()" class="btn btn-danger">Novo Projeto</button>
+            <button class="btn btn-success"  ><a  href="/projeto.html">Olhar Projeto </a></button>
+          </div>
+
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Esquema ilustrativo A/B1
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body AB1"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="B2C"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Esquema ilustrativo B2/C
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body B2C"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="C"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Esquema ilustrativo C
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body C"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- Modal -->
+            <div
+            class="modal fade"
+            id="CEF"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">
+                    Esquema ilustrativo C/D
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body CEF"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./script.js"></script>
+</html>
