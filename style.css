@@ -1,42 +1,36 @@
 body {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Ocupa a altura total da viewport */
-    margin: 0; /* Remove margens padrão do body */
-    background-color: rgb(66, 68, 65);
-   
-  }
+  margin: 0; /* Remove margens padrão do body */
+  padding: 0;
+  background-color: #2b2b2c;
+  margin: 0;
+  display: grid;
+  place-items: center; /* Centraliza horizontal e verticalmente */
+  min-height: 100vh;
+}
 
 .input-group {
-  width: 250px;
+  width: 200px;
   text-align: center;
   padding: 3px;
-  
 }
 
 .container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(66, 68, 65);
-  width: 100%;
-  height: 100%;
+  background-color: #e6e6fa;
 }
+
 .input-group {
- width: 230px;
-
+  width: 230px;
 }
-.input-group-text{
-font-size: 14px;
-font-weight: bold;
-
+.input-group-text {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #662d91;
+  color: white;
 }
-
 
 .form-control {
   font-weight: bold;
-  font-size: 26px;
+  font-size: 16px;
   text-align: center;
   color: red;
 }
@@ -49,57 +43,83 @@ font-weight: bold;
   font-size: 13px;
 }
 /*Selects */
-#tipoDispositivo{
+#tipoDispositivo {
   width: 250px;
-font-weight: bolder;
-
+  font-weight: bolder;
 }
 
-#selectCondutores{
-width: 250px;
-font-weight: bolder;
-
+#selectCondutores {
+  width: 250px;
+  font-weight: bolder;
 }
 
 select {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bolder;
-  
+}
+label {
+  color: black;
+}
+.select {
+  height: 200px;
 }
 
-.select{
-height: 200px;
-
-}
-
-option{
+option {
   font-weight: bolder;
 }
 
-option:hover{
-  font-size: 15px;
-  color: gold;
-  background-color: rgb(66, 68, 65);
+option:hover {
+  font-size: 20px;
+  background-color: #0d6efd;
+  color: white;
 }
 
-.btn{
-width: 220px;
+.btn {
+  width: 220px;
 }
 
-.buttons{
-  width:900px;
+.buttons {
+  width: 900px;
   display: flex;
   gap: 10px;
   margin-top: 10px;
   height: 50px;
 }
 
-label{
+#btnprojeto {
+  font-size: 16px;
   color: white;
-  font-weight: bolder;
 }
 
+#calcular {
+  background-color: #662d91;
+  color: white;
+}
+
+#salvar {
+  background-color: #e6e6fa;
+  color: black;
+  border-color: black;
+}
+
+#novoprojeto{
+  background-color: #662d91;
+  color: white;
+}
+
+#projeto{
+ background-color: #e6e6fa;
+  color: black;
+  border-color: black;
+}
+
+
+label {
+  color: rgb(19, 18, 18);
+  font-weight: bolder;
+  font-size: 20px;
+}
 
 .AB1 {
   background-repeat: no-repeat;
@@ -115,7 +135,7 @@ label{
   justify-content: center;
 }
 
-.C{
+.C {
   background-repeat: no-repeat;
 
   background-size: contain;
@@ -138,13 +158,39 @@ label{
 }
 
 a {
-  font-size: 15px;
-  font-weight: bolder;
   text-decoration: none;
+}
+.callmodal {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+.callmodal:hover {
   color: white;
 }
 
-a:hover {
-color: gold;
-font-size: 16px;
+.row {
+  margin: 0;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  margin-top: 20px; /* Centraliza verticalmente */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+.inputs .callmodal {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 300px;
+  background-color: #662d91;
 }

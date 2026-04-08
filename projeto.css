@@ -17,13 +17,13 @@ body {
 .modal-body{
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: darkslategray;
   text-align: center;
 }
 
 .modal-title{
   text-align: center;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 

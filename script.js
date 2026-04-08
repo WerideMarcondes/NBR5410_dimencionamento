@@ -54,6 +54,7 @@
 
 // apagar campo resultado
 window.onload = function reset() {
+  console.log('TESTE')
   document.getElementById("cabo").value = innerHTML = "";
   document.getElementById("disjuntor").value = innerHTML = "";
   document.getElementById("tensao").value = innerHTML = "";
@@ -143,7 +144,7 @@ function capacidade_ConducaoCobre() {
   ]; //Seções nominaiL 2.5 mm2
   const secoesNominais4 = [26, 24, 25, 23, 32, 28, 30, 27, 36, 32, 38, 31]; //Seções nominaiL 4 mm2
   const secoesNominais6 = [34, 31, 32, 29, 41, 36, 38, 34, 46, 41, 47, 39]; //Seções nominaiL 6 mm2
-  const secoesNominais10 = [46, 42, 43, 39, 57, 50, 52, 46, 63, 57, 63, 52]; //Seções nominaiL 10 mm2
+  const secoesNominais10 = [46, 42, 43, 39, 57, 50, 52, 47, 63, 57, 63, 52]; //Seções nominaiL 10 mm2
   const secoesNominais16 = [61, 56, 57, 52, 76, 68, 69, 62, 85, 76, 81, 67]; //Seções nominaiL 16 mm2
   const secoesNominais25 = [89, 73, 75, 68, 101, 89, 90, 80, 112, 96, 104, 86]; //Seções nominaiL 25 mm2
   const secoesNominais35 = [
@@ -267,7 +268,8 @@ function capacidade_ConducaoCobre() {
       return (document.getElementById("cabo").value = innerHTML = "1");
     } else if (
       secoesNominais015.indexOf(corrente) === 0 &&
-      tipo_dispositivo() != "tomada"
+      tipo_dispositivo() != "tomada" || tipo_dispositivo() == "outro"
+      
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
@@ -426,7 +428,7 @@ function capacidade_ConducaoCobre() {
   }
   if (metodo_Instalacao() == "A2" && condutores_Carregados() == 2) {
     const corrente = A22.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    console.log(corrente);
+    console.log(secoesNominais0005.findIndex(corrente => corrente.corrente === 2));
     if (
       secoesNominais0005.indexOf(corrente) === 2 &&
       tipo_dispositivo() == "outro"
@@ -440,7 +442,7 @@ function capacidade_ConducaoCobre() {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
     } else if (
-      secoesNominais1.indexOf(corrente) === 2 &&
+      secoesNominais1.indexOf(corrente) === 3 &&
       tipo_dispositivo() == "outro"
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
@@ -783,12 +785,14 @@ function capacidade_ConducaoCobre() {
     }
   }
   if (metodo_Instalacao() == "B2" && condutores_Carregados() == 2) {
+
     const corrente = B22.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
     if (
-      secoesNominais0005.indexOf(corrente) === 6 &&
+      secoesNominais0005.findIndex(corrente => corrente === 6 ) &&
       tipo_dispositivo() == "outro"
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
+      console.log("correto");
       return (document.getElementById("cabo").value = innerHTML = "0,5");
     } else if (
       secoesNominais0075.indexOf(corrente) === 6 &&
@@ -876,10 +880,11 @@ function capacidade_ConducaoCobre() {
     const corrente = B23.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
     console.log(corrente);
     if (
-      secoesNominais0005.indexOf(corrente) === 7 &&
+      secoesNominais0005.findIndex(corrente => corrente.corrente === 7)&&
       tipo_dispositivo() == "outro"
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
+     
       return (document.getElementById("cabo").value = innerHTML = "0,5");
     } else if (
       secoesNominais0075.indexOf(corrente) === 7 &&
@@ -906,7 +911,7 @@ function capacidade_ConducaoCobre() {
     } else if (secoesNominais4.indexOf(corrente) === 7) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) <= 7) {
+    } else if (secoesNominais6.indexOf(corrente) === 7) {
       console.log(secoesNominais6.indexOf(corrente));
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
@@ -968,7 +973,7 @@ function capacidade_ConducaoCobre() {
   if (metodo_Instalacao() == "C" && condutores_Carregados() == 2) {
     const corrente = C2.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
     if (
-      secoesNominais0005.indexOf(corrente) === 8 &&
+      secoesNominais0005.findIndex(corrente => corrente.corrente === 8) &&
       tipo_dispositivo() == "outro"
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
@@ -1057,7 +1062,7 @@ function capacidade_ConducaoCobre() {
   if (metodo_Instalacao() == "C" && condutores_Carregados() == 3) {
     const corrente = C3.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
     if (
-      secoesNominais0005.indexOf(corrente) === 9 &&
+      secoesNominais0005.findIndex(corrente => corrente.corrente === 9)  &&
       tipo_dispositivo() == "outro"
     ) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
@@ -1322,9 +1327,6 @@ function capacidade_ConducaoCobre() {
     }
   }
 }
-
-capacidade_ConducaoCobre();
-novo_Projeto();
 
 function salvar() {
   var tensao = document.getElementById("tensao").value;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,8 +41,8 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="row">
-                <div class="input-group">
+        <div class="row inputs">
+          <div class="input-group">
             <input
               id="circuito"
               aria-label="First name"
@@ -80,126 +80,150 @@
               class="form-control entrada"
             /><label class="input-group-text">Corrente Projeto</label>
           </div>
+          <div class="col inputs">
+            <label
+              >Tipo de Disposotivo
+              <select
+                class="form-select-sm form-select entrada"
+                onchange="tipo_dispositivo(this.value)"
+                id="tipoDispositivo"
+                aria-label=".form-select-sm example"
+              >
+                <option value="outro">Outros</option>
+                <option value="iluminacao">Iluminação</option>
+                <option value="tomada">Tomada</option>
+              </select>
+            </label>
+            <label
+              >Condutores Carregados
+              <select
+                class="form-select-sm form-select entrada"
+                onchange="condutores_Carregados(this.value)"
+                id="selectCondutores"
+                aria-label=".form-select-sm example"
+              >
+                <option value="2">Condutores Carregados 2</option>
+                <option value="3">Condutores Carregados 3</option>
+              </select>
+            </label>
+          </div>
         </div>
-        <div class="col">
-        <label >Tipo de Disposotivo
-          <select  class="form-select-sm form-select entrada"  onchange="tipo_dispositivo(this.value)" id="tipoDispositivo" aria-label=".form-select-sm example">
-            <option  value="outro">Outros</option>
-            <option  value="iluminacao"> Iluminação </option>
-            <option  value="tomada">Tomada</option>
-          </select>
-        </label>
-          <label >Condutores Carregados
-        <select  class="form-select-sm form-select entrada"  onchange="condutores_Carregados(this.value)" id="selectCondutores" aria-label=".form-select-sm example">
-          <option  value="2">Condutores Carregados 2</option>
-          <option  value="3"> Condutores Carregados 3</option>
-        </select>
-      </label>
-      </div>
-       <label>Método de instalação</label>
+
+        <label>Método de instalação</label>
         <div class="row select">
-        <select size="2"
-          class="form-select form-select-sm entrada"
-          aria-label=".form-select-sm example"
-          id="metodoInstalacao" onchange="metodo_Instalacao(this.value)"
-        >
-          <option value="A1">
-            (1) A1 Condutores isolados ou cabos unipolares em eletroduto de seção
-            circular embutido em parede termicamente isolante2
-          </option>
-          <option value="A2">
-            (2) A2 Cabo multipolar em eletroduto de seção circular embutido em
-            parede termicamente isolante
-          </option>
-          <option value="B1">
-            (3) B1 Condutores isolados ou cabos unipolares em eletroduto aparente
-            de seção circular sobre parede ou espaçado desta menos de 0,3 vez o
-            diâmetro do eletroduto
-          </option>
-          <option value="B2">
-            (4)  B2 Cabo multipolar em eletroduto aparente de seção circular sobre
-            parede ou espaçado desta menos de 0,3 vez o diâmetro do eletroduto
-          </option>
+          <select
+            size="2"
+            class="form-select form-select-sm entrada"
+            aria-label=".form-select-sm example"
+            id="metodoInstalacao"
+            onchange="metodo_Instalacao(this.value)"
+          >
+            <option value="A1">
+              (1) A1 Condutores isolados ou cabos unipolares em eletroduto de
+              seção circular embutido em parede termicamente isolante2
+            </option>
+            <option value="A2">
+              (2) A2 Cabo multipolar em eletroduto de seção circular embutido em
+              parede termicamente isolante
+            </option>
+            <option value="B1">
+              (3) B1 Condutores isolados ou cabos unipolares em eletroduto
+              aparente de seção circular sobre parede ou espaçado desta menos de
+              0,3 vez o diâmetro do eletroduto
+            </option>
+            <option value="B2">
+              (4) B2 Cabo multipolar em eletroduto aparente de seção circular
+              sobre parede ou espaçado desta menos de 0,3 vez o diâmetro do
+              eletroduto
+            </option>
 
-          <option value="B1">
-            (5)  B1 Condutores isolados ou cabos unipolares em eletroduto aparente
-            de seção não-circular sobre parede
-          </option>
-          <option value="B2">
-            (6) B2 Cabo multipolar em eletroduto aparente de seção não-circular
-            sobre parede
-          </option>
-          <option value="B1">
-            (7) B1 Condutores isolados ou cabos unipolares em eletroduto de seção
-            circular embutido em alvenaria
-          </option>
-          <option value="B2">
-            (8) B2 Cabo multipolar em eletroduto de seção circular embutido em
-            alvenaria
-          </option>
-          <option value="C">
-            (11) C Cabos unipolares ou cabo multipolar sobre
-            parede ou espaçado desta menos de 0,3 vez
-            o diâmetro do cabo
-          </option>
-          <option value="C">
-            (11a) C Cabos unipolares ou cabo multipolar fixado
-            diretamente no teto
-          </option>
-          <option value="C">
-           (11b) C Cabos unipolares ou cabo multipolar afastado
-           do teto mais de 0,3 vez o diâmetro do cabo
-          </option>
-          <option value="C">
-            (12) C Cabos unipolares ou cabo multipolar em
-            bandeja não-perfurada, perfilado ou
-            prateleira
-          </option>
-          <option value="C">
-            (52) C Cabos unipolares ou cabo multipolar
-            embutido(s) diretamente em alvenaria sem
-            proteção mecânica adicional
-          </option>
-          <option value="C">
-            (53) C Cabos unipolares ou cabo multipolar
-            embutido(s) diretamente em alvenaria com
-            proteção mecânica adicional
-          </option>
-          <option value="D">
-            (61) D Cabo multipolar em eletroduto(de seção
-            circular ou não) ou em canaleta não-ventilada
-            enterrado(a)
-          </option>
-          <option value="D">
-            (61a) D Cabos unipolares em eletroduto( de seção
-            não-circular ou não) ou em canaleta nãoventilada
-            enterrado
-          </option>
-          <option value="D">
-            (63) D Cabos unipolares ou cabo multipolar
-            diretamente enterrado(s), com proteção
-            mecânica adicional
-          </option>
-       
-        </select>
-      </div>
+            <option value="B1">
+              (5) B1 Condutores isolados ou cabos unipolares em eletroduto
+              aparente de seção não-circular sobre parede
+            </option>
+            <option value="B2">
+              (6) B2 Cabo multipolar em eletroduto aparente de seção
+              não-circular sobre parede
+            </option>
+            <option value="B1">
+              (7) B1 Condutores isolados ou cabos unipolares em eletroduto de
+              seção circular embutido em alvenaria
+            </option>
+            <option value="B2">
+              (8) B2 Cabo multipolar em eletroduto de seção circular embutido em
+              alvenaria
+            </option>
+            <option value="C">
+              (11) C Cabos unipolares ou cabo multipolar sobre parede ou
+              espaçado desta menos de 0,3 vez o diâmetro do cabo
+            </option>
+            <option value="C">
+              (11a) C Cabos unipolares ou cabo multipolar fixado diretamente no
+              teto
+            </option>
+            <option value="C">
+              (11b) C Cabos unipolares ou cabo multipolar afastado do teto mais
+              de 0,3 vez o diâmetro do cabo
+            </option>
+            <option value="C">
+              (12) C Cabos unipolares ou cabo multipolar em bandeja
+              não-perfurada, perfilado ou prateleira
+            </option>
+            <option value="C">
+              (52) C Cabos unipolares ou cabo multipolar embutido(s) diretamente
+              em alvenaria sem proteção mecânica adicional
+            </option>
+            <option value="C">
+              (53) C Cabos unipolares ou cabo multipolar embutido(s) diretamente
+              em alvenaria com proteção mecânica adicional
+            </option>
+            <option value="D">
+              (61) D Cabo multipolar em eletroduto(de seção circular ou não) ou
+              em canaleta não-ventilada enterrado(a)
+            </option>
+            <option value="D">
+              (61a) D Cabos unipolares em eletroduto( de seção não-circular ou
+              não) ou em canaleta nãoventilada enterrado
+            </option>
+            <option value="D">
+              (63) D Cabos unipolares ou cabo multipolar diretamente
+              enterrado(s), com proteção mecânica adicional
+            </option>
+          </select>
+        </div>
 
-        <div class="row">
-          <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="/"
+        <div class="row inputs callmodal">
+          <a
+            class="callmodal"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            href="/"
             >Esquema ilustrativo A/B1</a
           >
-          <a href="/" data-bs-toggle="modal" data-bs-target="#B2C"
+          <a
+            class="callmodal"
+            href="/"
+            data-bs-toggle="modal"
+            data-bs-target="#B2C"
             >Esquema ilustrativo B2/C</a
           >
-          <a href="/" data-bs-toggle="modal" data-bs-target="#C"
-          >Esquema ilustrativo C</a
-        >
-          
-          <a href="/" data-bs-toggle="modal" data-bs-target="#CEF"
+          <a
+            class="callmodal"
+            href="/"
+            data-bs-toggle="modal"
+            data-bs-target="#C"
+            >Esquema ilustrativo C</a
+          >
+
+          <a
+            class="callmodal"
+            href="/"
+            data-bs-toggle="modal"
+            data-bs-target="#CEF"
             >Esquema ilustrativo C/D</a
           >
         </div>
-        <div class="row">
+        <div class="row inputs">
           <div class="input-group">
             <input
               readonly
@@ -217,25 +241,25 @@
               class="form-control"
             /><span class="input-group-text">mm²</span>
           </div>
-        </div>
-
-  <div class="buttons">
+          <div class="buttons">
             <button
-              class="btn btn-primary"
+              class="btn btn"
+              id="calcular"
               onclick="capacidade_ConducaoCobre()"
             >
               Calcular
             </button>
-             <button
-              class="btn btn-warning"
-              onclick="salvar()"
-            >
+            <button class="btn btn" id="salvar" onclick="salvar()">
               Salvar
             </button>
-            <button  onclick="novo_Projeto()" class="btn btn-danger">Novo Projeto</button>
-            <button class="btn btn-success"  ><a  href="/projeto.html">Olhar Projeto </a></button>
+            <button onclick="novo_Projeto()" id="novoprojeto" class="btn btn">
+              Novo Projeto
+            </button>
+            <a id="btnprojeto" href="/projeto.html"
+              ><button id="projeto" class="btn btn">Projeto</button></a
+            >
           </div>
-
+        </div>
       </div>
 
       <!-- Modal -->
@@ -275,7 +299,6 @@
         </div>
       </div>
 
-      <!-- Modal -->
       <div
         class="modal fade"
         id="B2C"
@@ -285,7 +308,7 @@
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">
@@ -312,7 +335,6 @@
         </div>
       </div>
 
-      <!-- Modal -->
       <div
         class="modal fade"
         id="C"
@@ -322,7 +344,7 @@
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">
@@ -348,42 +370,44 @@
           </div>
         </div>
       </div>
-            <!-- Modal -->
-            <div
-            class="modal fade"
-            id="CEF"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">
-                    Esquema ilustrativo C/D
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body CEF"></div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
+
+       <div
+        class="modal fade"
+         id="CEF"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+              Esquema ilustrativo C/D
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body CEF"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
     </div>
   </body>
   <script type="text/javascript" src="./script.js"></script>
