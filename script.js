@@ -54,7 +54,7 @@
 
 // apagar campo resultado
 window.onload = function reset() {
-  console.log('TESTE')
+  console.log("TESTE");
   document.getElementById("cabo").value = innerHTML = "";
   document.getElementById("disjuntor").value = innerHTML = "";
   document.getElementById("tensao").value = innerHTML = "";
@@ -206,8 +206,8 @@ function capacidade_ConducaoCobre() {
   ];
 
   A23 = [
-    9, 11, 13, 17.5, 23, 29, 39, 52, 68, 83, 99, 125, 150, 172, 196, 223, 261,
-    298, 355, 406, 467, 540, 618,
+    7, 9, 10, 13, 17.5, 23, 29, 39, 52, 68, 83, 99, 125, 150, 172, 196, 223,
+    261, 298, 355, 406, 467, 540, 618,
   ];
 
   B12 = [
@@ -248,89 +248,76 @@ function capacidade_ConducaoCobre() {
   if (metodo_Instalacao() == "A1" && condutores_Carregados() == 2) {
     corrente = A12.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
     console.log(corrente);
-    if (
-      secoesNominais0005.indexOf(corrente) === 0 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[0] === corrente && A12[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 0 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[0] === corrente && A12[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 0 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[0] === corrente && A12[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      secoesNominais015.indexOf(corrente) === 0 &&
-      tipo_dispositivo() != "tomada" || tipo_dispositivo() == "outro"
-      
-    ) {
+    } else if (secoesNominais015[0] === corrente && A12[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 0) {
+    } else if (secoesNominais025[0] === corrente && A12[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 0) {
+    } else if (secoesNominais4[0] === corrente && A12[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 0) {
+    } else if (secoesNominais6[0] === corrente && A12[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 0) {
+    } else if (secoesNominais10[0] === corrente && A12[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 0) {
+    } else if (secoesNominais16[0] === corrente && A12[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 0) {
+    } else if (secoesNominais25[0] === corrente && A12[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 0) {
+    } else if (secoesNominais35[0] === corrente && A12[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 0) {
+    } else if (secoesNominais50[0] === corrente && A12[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 0) {
+    } else if (secoesNominais70[0] === corrente && A12[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 0) {
+    } else if (secoesNominais95[0] === corrente && A12[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 0) {
+    } else if (secoesNominais120[0] === corrente && A12[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 0) {
+    } else if (secoesNominais150[0] === corrente && A12[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 0) {
+    } else if (secoesNominais185[0] === corrente && A12[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 0) {
+    } else if (secoesNominais240[0] === corrente && A12[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 0) {
+    } else if (secoesNominais300[0] === corrente && A12[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 0) {
+    } else if (secoesNominais400[0] === corrente && A12[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 0) {
+    } else if (secoesNominais500[0] === corrente && A12[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 0) {
+    } else if (secoesNominais630[0] === corrente && A12[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 0) {
+    } else if (secoesNominais800[0] === corrente && A12[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 0) {
+    } else if (secoesNominais1000[0] === corrente && A12[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
@@ -338,180 +325,153 @@ function capacidade_ConducaoCobre() {
 
   if (metodo_Instalacao() == "A1" && condutores_Carregados() == 3) {
     const corrente = A13.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    console.log(corrente);
-    if (
-      secoesNominais0005.indexOf(corrente) === 0 &&
-      tipo_dispositivo() == "outro"
-    ) {
+
+    if (secoesNominais0005[1] === corrente && A13[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 0 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[1] === corrente && A13[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 1 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[1] === corrente && A13[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 1 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[1] === corrente && A13[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 1) {
+    } else if (secoesNominais025[1] === corrente && A13[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 1) {
+    } else if (secoesNominais4[1] === corrente && A13[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 1) {
+    } else if (secoesNominais6[1] === corrente && A13[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 1) {
+    } else if (secoesNominais10[1] === corrente && A13[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 1) {
+    } else if (secoesNominais16[1] === corrente && A13[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 1) {
+    } else if (secoesNominais25[1] === corrente && A13[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 1) {
+    } else if (secoesNominais35[1] === corrente && A13[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 1) {
+    } else if (secoesNominais50[1] === corrente && A13[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 1) {
+    } else if (secoesNominais70[1] === corrente && A13[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 1) {
+    } else if (secoesNominais95[1] === corrente && A13[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 1) {
+    } else if (secoesNominais120[1] === corrente && A13[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 1) {
+    } else if (secoesNominais150[1] === corrente && A13[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 1) {
+    } else if (secoesNominais185[1] === corrente && A13[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 1) {
+    } else if (secoesNominais240[1] === corrente && A13[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 1) {
+    } else if (secoesNominais300[1] === corrente && A13[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 1) {
+    } else if (secoesNominais400[1] === corrente && A13[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 1) {
+    } else if (secoesNominais500[1] === corrente && A13[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 1) {
+    } else if (secoesNominais630[1] === corrente && A13[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 1) {
+    } else if (secoesNominais800[1] === corrente && A13[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 1) {
+    } else if (secoesNominais1000[1] === corrente && A13[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "A2" && condutores_Carregados() == 2) {
     const corrente = A22.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    console.log(secoesNominais0005.findIndex(corrente => corrente.corrente === 2));
-    if (
-      secoesNominais0005.indexOf(corrente) === 2 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[2] === corrente && A22[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 2 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[2] === corrente && A22[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 3 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[2] === corrente && A22[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 2 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[2] === corrente && A22[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 2) {
+    } else if (secoesNominais025[2] === corrente && A22[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 2) {
+    } else if (secoesNominais4[2] === corrente && A22[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 2) {
+    } else if (secoesNominais6[2] === corrente && A22[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 2) {
+    } else if (secoesNominais10[2] === corrente && A22[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 2) {
+    } else if (secoesNominais16[2] === corrente && A22[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 2) {
+    } else if (secoesNominais25[2] === corrente && A22[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 2) {
+    } else if (secoesNominais35[2] === corrente && A22[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 2) {
+    } else if (secoesNominais50[2] === corrente && A22[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 2) {
+    } else if (secoesNominais70[2] === corrente && A22[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 2) {
+    } else if (secoesNominais95[2] === corrente && A22[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 2) {
+    } else if (secoesNominais120[2] === corrente && A22[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 2) {
+    } else if (secoesNominais150[2] === corrente && A22[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 2) {
+    } else if (secoesNominais185[2] === corrente && A22[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 2) {
+    } else if (secoesNominais240[2] === corrente && A22[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 2) {
+    } else if (secoesNominais300[2] === corrente && A22[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 2) {
+    } else if (secoesNominais400[2] === corrente && A22[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 2) {
+    } else if (secoesNominais500[2] === corrente && A22[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 2) {
+    } else if (secoesNominais630[2] === corrente && A22[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 2) {
+    } else if (secoesNominais800[2] === corrente && A22[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 2) {
+    } else if (secoesNominais1000[2] === corrente && A22[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
@@ -519,358 +479,306 @@ function capacidade_ConducaoCobre() {
 
   if (metodo_Instalacao() == "A2" && condutores_Carregados() == 3) {
     const corrente = A23.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.indexOf(corrente) === 3 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    console.log(corrente);
+    if (secoesNominais0005[3] === corrente && A23[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 3 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[3] === corrente && A23[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 3 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[3] === corrente && A23[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 3 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[3] === corrente && A23[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 3) {
+    } else if (secoesNominais025[3] === corrente && A23[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 3) {
+    } else if (secoesNominais4[3] === corrente && A23[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 3) {
+    } else if (secoesNominais6[3] === corrente && A23[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 3) {
+    } else if (secoesNominais10[3] === corrente && A23[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 3) {
+    } else if (secoesNominais16[3] === corrente && A23[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 3) {
+    } else if (secoesNominais25[3] === corrente && A23[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 3) {
+    } else if (secoesNominais35[3] === corrente && A23[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 3) {
+    } else if (secoesNominais50[3] === corrente && A23[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 3) {
+    } else if (secoesNominais70[3] === corrente && A23[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 3) {
+    } else if (secoesNominais95[3] === corrente && A23[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 3) {
+    } else if (secoesNominais120[3] === corrente && A23[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 3) {
+    } else if (secoesNominais150[3] === corrente && A23[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 3) {
+    } else if (secoesNominais185[3] === corrente && A23[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 3) {
+    } else if (secoesNominais240[3] === corrente && A23[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 3) {
+    } else if (secoesNominais300[3] === corrente && A23[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 3) {
+    } else if (secoesNominais400[3] === corrente && A23[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 3) {
+    } else if (secoesNominais500[3] === corrente && A23[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 3) {
+    } else if (secoesNominais630[3] === corrente && A23[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 3) {
+    } else if (secoesNominais800[3] === corrente && A23[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 3) {
+    } else if (secoesNominais1000[3] === corrente && A23[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "B1" && condutores_Carregados() == 2) {
     const corrente = B12.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.indexOf(corrente) === 4 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[4] === corrente && B12[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 4 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[4] === corrente && B12[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 4 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[4] === corrente && B12[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 4 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[4] === corrente && B12[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 4) {
+    } else if (secoesNominais025[4] === corrente && B12[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 4) {
+    } else if (secoesNominais4[4] === corrente && B12[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 4) {
+    } else if (secoesNominais6[4] === corrente && B12[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 4) {
+    } else if (secoesNominais10[4] === corrente && B12[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 4) {
+    } else if (secoesNominais16[4] === corrente && B12[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 4) {
+    } else if (secoesNominais25[4] === corrente && B12[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 4) {
+    } else if (secoesNominais35[4] === corrente && B12[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 4) {
+    } else if (secoesNominais50[4] === corrente && B12[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 4) {
+    } else if (secoesNominais70[4] === corrente && B12[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 4) {
+    } else if (secoesNominais95[4] === corrente && B12[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 4) {
+    } else if (secoesNominais120[4] === corrente && B12[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 4) {
+    } else if (secoesNominais150[4] === corrente && B12[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 4) {
+    } else if (secoesNominais185[4] === corrente && B12[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 4) {
+    } else if (secoesNominais240[4] === corrente && B12[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 4) {
+    } else if (secoesNominais300[4] === corrente && B12[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 4) {
+    } else if (secoesNominais400[4] === corrente && B12[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 4) {
+    } else if (secoesNominais500[4] === corrente && B12[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 4) {
+    } else if (secoesNominais630[4] === corrente && B12[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 4) {
+    } else if (secoesNominais800[4] === corrente && B12[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 4) {
+    } else if (secoesNominais1000[4] === corrente && B12[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "B1" && condutores_Carregados() == 3) {
     const corrente = B13.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.indexOf(corrente) === 5 &&
-      tipo_dispositivo() == "outro"
-    ) {
+
+    if (secoesNominais0005[5] === corrente && B13[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 5 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[5] === corrente && B13[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 5 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[5] === corrente && B13[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 5 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[5] === corrente && B13[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 5) {
+    } else if (secoesNominais025[5] === corrente && B13[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 5) {
+    } else if (secoesNominais4[5] === corrente && B13[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 5) {
+    } else if (secoesNominais6[5] === corrente && B13[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 5) {
+    } else if (secoesNominais10[5] === corrente && B13[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 5) {
+    } else if (secoesNominais16[5] === corrente && B13[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 5) {
+    } else if (secoesNominais25[5] === corrente && B13[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 5) {
+    } else if (secoesNominais35[5] === corrente && B13[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 5) {
+    } else if (secoesNominais50[5] === corrente && B13[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 5) {
+    } else if (secoesNominais70[5] === corrente && B13[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 5) {
+    } else if (secoesNominais95[5] === corrente && B13[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 5) {
+    } else if (secoesNominais120[5] === corrente && B13[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 5) {
+    } else if (secoesNominais150[5] === corrente && B13[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 5) {
+    } else if (secoesNominais185[5] === corrente && B13[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 5) {
+    } else if (secoesNominais240[5] === corrente && B13[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 5) {
+    } else if (secoesNominais300[5] === corrente && B13[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 5) {
+    } else if (secoesNominais400[5] === corrente && B13[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 5) {
+    } else if (secoesNominais500[5] === corrente && B13[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 5) {
+    } else if (secoesNominais630[5] === corrente && B13[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 5) {
+    } else if (secoesNominais800[5] === corrente && B13[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 5) {
+    } else if (secoesNominais1000[5] === corrente && B13[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "B2" && condutores_Carregados() == 2) {
-
     const corrente = B22.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.findIndex(corrente => corrente === 6 ) &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[6] === corrente && B22[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
-      console.log("correto");
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 6 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[6] === corrente && B22[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 6 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[6] === corrente && B22[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 6 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[6] === corrente && B22[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 6) {
+    } else if (secoesNominais025[6] === corrente && B22[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 6) {
+    } else if (secoesNominais4[6] === corrente && B22[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 6) {
+    } else if (secoesNominais6[6] === corrente && B22[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 6) {
+    } else if (secoesNominais10[6] === corrente && B22[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 6) {
+    } else if (secoesNominais16[6] === corrente && B22[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 6) {
+    } else if (secoesNominais25[6] === corrente && B22[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 6) {
+    } else if (secoesNominais35[6] === corrente && B22[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 6) {
+    } else if (secoesNominais50[6] === corrente && B22[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 6) {
+    } else if (secoesNominais70[6] === corrente && B22[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 6) {
+    } else if (secoesNominais95[6] === corrente && B22[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 6) {
+    } else if (secoesNominais120[6] === corrente && B22[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 6) {
+    } else if (secoesNominais150[6] === corrente && B22[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 6) {
+    } else if (secoesNominais185[6] === corrente && B22[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 6) {
+    } else if (secoesNominais240[6] === corrente && B22[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 6) {
+    } else if (secoesNominais300[6] === corrente && B22[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 6) {
+    } else if (secoesNominais400[6] === corrente && B22[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 6) {
+    } else if (secoesNominais500[6] === corrente && B22[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 6) {
+    } else if (secoesNominais630[6] === corrente && B22[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 6) {
+    } else if (secoesNominais800[6] === corrente && B22[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 6) {
+    } else if (secoesNominais1000[6] === corrente && B22[24] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
@@ -878,93 +786,79 @@ function capacidade_ConducaoCobre() {
   if (metodo_Instalacao() == "B2" && condutores_Carregados() == 3) {
     console.log("correto");
     const corrente = B23.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    console.log(corrente);
-    if (
-      secoesNominais0005.findIndex(corrente => corrente.corrente === 7)&&
-      tipo_dispositivo() == "outro"
-    ) {
+
+    if (secoesNominais0005[7] === corrente && B23[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
-     
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 7 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[7] === corrente && B23[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 7 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[7] === corrente && B23[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 7 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[7] === corrente && B23[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 7) {
+    } else if (secoesNominais025[7] === corrente && B23[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 7) {
+    } else if (secoesNominais4[7] === corrente && B23[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 7) {
+    } else if (secoesNominais6[7] === corrente && B23[6] === corrente) {
       console.log(secoesNominais6.indexOf(corrente));
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 7) {
+    } else if (secoesNominais10[7] === corrente && B23[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 7) {
+    } else if (secoesNominais16[7] === corrente && B23[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 7) {
+    } else if (secoesNominais25[7] === corrente && B23[9] === corrente) {
       console.log(secoesNominais25.indexOf(corrente));
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 7) {
+    } else if (secoesNominais35[7] === corrente && B23[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 7) {
+    } else if (secoesNominais50[7] === corrente && B23[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 7) {
+    } else if (secoesNominais70[7] === corrente && B23[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 7) {
+    } else if (secoesNominais95[7] === corrente && B23[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 7) {
+    } else if (secoesNominais120[7] === corrente && B23[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 7) {
+    } else if (secoesNominais150[7] === corrente && B23[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 7) {
+    } else if (secoesNominais185[7] === corrente && B23[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 7) {
+    } else if (secoesNominais240[7] === corrente && B23[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 7) {
+    } else if (secoesNominais300[7] === corrente && B23[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 7) {
+    } else if (secoesNominais400[7] === corrente && B23[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 7) {
+    } else if (secoesNominais500[7] === corrente && B23[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 7) {
+    } else if (secoesNominais630[7] === corrente && B23[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 7) {
+    } else if (secoesNominais800[7] === corrente && B23[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 7) {
+    } else if (secoesNominais1000[7] === corrente && B23[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
@@ -972,356 +866,306 @@ function capacidade_ConducaoCobre() {
 
   if (metodo_Instalacao() == "C" && condutores_Carregados() == 2) {
     const corrente = C2.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.findIndex(corrente => corrente.corrente === 8) &&
-      tipo_dispositivo() == "outro"
-    ) {
+
+    if (secoesNominais0005[8] === corrente && C2[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 8 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[8] === corrente && C2[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 8 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[8] === corrente && C2[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 8 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[8] === corrente && C2[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 8) {
+    } else if (secoesNominais025[8] === corrente && C2[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 8) {
+    } else if (secoesNominais4[8] === corrente && C2[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 8) {
+    } else if (secoesNominais6[8] === corrente && C2[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 8) {
+    } else if (secoesNominais10[8] === corrente && C2[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 8) {
+    } else if (secoesNominais16[8] === corrente && C2[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 8) {
+    } else if (secoesNominais25[8] === corrente && C2[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 8) {
+    } else if (secoesNominais35[8] === corrente && C2[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 8) {
+    } else if (secoesNominais50[8] === corrente && C2[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 8) {
+    } else if (secoesNominais70[8] === corrente && C2[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 8) {
+    } else if (secoesNominais95[8] === corrente && C2[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 8) {
+    } else if (secoesNominais120[8] === corrente && C2[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 8) {
+    } else if (secoesNominais150[8] === corrente && C2[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 8) {
+    } else if (secoesNominais185[8] === corrente && C2[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 8) {
+    } else if (secoesNominais240[8] === corrente && C2[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 8) {
+    } else if (secoesNominais300[8] === corrente && C2[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 8) {
+    } else if (secoesNominais400[8] === corrente && C2[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 8) {
+    } else if (secoesNominais500[8] === corrente && C2[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 8) {
+    } else if (secoesNominais630[8] === corrente && C2[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 8) {
+    } else if (secoesNominais800[8] === corrente && C2[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 8) {
+    } else if (secoesNominais1000[8] === corrente && C2[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "C" && condutores_Carregados() == 3) {
     const corrente = C3.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.findIndex(corrente => corrente.corrente === 9)  &&
-      tipo_dispositivo() == "outro"
-    ) {
+
+    if (secoesNominais0005[9] === corrente && C3[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 9 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[9] === corrente && C3[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 9 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[9] === corrente && C3[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 9 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[9] === corrente && C3[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 9) {
+    } else if (secoesNominais025[9] === corrente && C3[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 9) {
+    } else if (secoesNominais4[9] === corrente && C3[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 9) {
+    } else if (secoesNominais6[9] === corrente && C3[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 9) {
+    } else if (secoesNominais10[9] === corrente && C3[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 9) {
+    } else if (secoesNominais16[9] === corrente && C3[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 9) {
+    } else if (secoesNominais25[9] === corrente && C3[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 9) {
+    } else if (secoesNominais35[9] === corrente && C3[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 9) {
+    } else if (secoesNominais50[9] === corrente && C3[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 9) {
+    } else if (secoesNominais70[9] === corrente && C3[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 9) {
+    } else if (secoesNominais95[9] === corrente && C3[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 9) {
+    } else if (secoesNominais120[9] === corrente && C3[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 9) {
+    } else if (secoesNominais150[9] === corrente && C3[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 9) {
+    } else if (secoesNominais185[9] === corrente && C3[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 9) {
+    } else if (secoesNominais240[9] === corrente && C3[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 9) {
+    } else if (secoesNominais300[9] === corrente && C3[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 9) {
+    } else if (secoesNominais400[9] === corrente && C3[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 9) {
+    } else if (secoesNominais500[9] === corrente && C3[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 9) {
+    } else if (secoesNominais630[9] === corrente && C3[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 9) {
+    } else if (secoesNominais800[9] === corrente && C3[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 9) {
+    } else if (secoesNominais1000[9] === corrente && C3[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "D" && condutores_Carregados() == 2) {
     const corrente = D2.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.indexOf(corrente) === 10 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[10] === corrente && D2[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 10 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[10] === corrente && D2[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 10 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[10] === corrente && D2[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 10 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[10] === corrente && D2[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 10) {
+    } else if (secoesNominais025[10] === corrente && D2[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 10) {
+    } else if (secoesNominais4[10] === corrente && D2[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 10) {
+    } else if (secoesNominais6[10] === corrente && D2[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 10) {
+    } else if (secoesNominais10[10] === corrente && D2[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 10) {
+    } else if (secoesNominais16[10] === corrente && D2[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 10) {
+    } else if (secoesNominais25[10] === corrente && D2[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 10) {
+    } else if (secoesNominais35[10] === corrente && D2[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 10) {
+    } else if (secoesNominais50[10] === corrente && D2[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 10) {
+    } else if (secoesNominais70[10] === corrente && D2[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 10) {
+    } else if (secoesNominais95[10] === corrente && D2[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 10) {
+    } else if (secoesNominais120[10] === corrente && D2[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 10) {
+    } else if (secoesNominais150[10] === corrente && D2[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 10) {
+    } else if (secoesNominais185[10] === corrente && D2[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 10) {
+    } else if (secoesNominais240[10] === corrente && D2[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 10) {
+    } else if (secoesNominais300[10] === corrente && D2[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 10) {
+    } else if (secoesNominais400[10] === corrente && D2[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 10) {
+    } else if (secoesNominais500[10] === corrente && D2[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 10) {
+    } else if (secoesNominais630[10] === corrente && D2[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 10) {
+    } else if (secoesNominais800[10] === corrente && D2[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 10) {
+    } else if (secoesNominais1000[10] === corrente && D2[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "D" && condutores_Carregados() == 3) {
     const corrente = D3.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (
-      secoesNominais0005.indexOf(corrente) === 11 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    if (secoesNominais0005[11] === corrente && D3[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
-    } else if (
-      secoesNominais0075.indexOf(corrente) === 11 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais0075[11] === corrente && D3[1] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,75");
-    } else if (
-      secoesNominais1.indexOf(corrente) === 11 &&
-      tipo_dispositivo() == "outro"
-    ) {
+    } else if (secoesNominais1[11] === corrente && D3[2] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1");
-    } else if (
-      (secoesNominais015.indexOf(corrente) === 11 &&
-        tipo_dispositivo() == "outro") ||
-      tipo_dispositivo() == "iluminacao"
-    ) {
+    } else if (secoesNominais015[11] === corrente && D3[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025.indexOf(corrente) === 11) {
+    } else if (secoesNominais025[11] === corrente && D3[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4.indexOf(corrente) === 11) {
+    } else if (secoesNominais4[11] === corrente && D3[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6.indexOf(corrente) === 11) {
+    } else if (secoesNominais6[11] === corrente && D3[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10.indexOf(corrente) === 11) {
+    } else if (secoesNominais10[11] === corrente && D3[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16.indexOf(corrente) === 11) {
+    } else if (secoesNominais16[11] === corrente && D3[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25.indexOf(corrente) === 11) {
+    } else if (secoesNominais25[11] === corrente && D3[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35.indexOf(corrente) === 11) {
+    } else if (secoesNominais35[11] === corrente && D3[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50.indexOf(corrente) === 11) {
+    } else if (secoesNominais50[11] === corrente && D3[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70.indexOf(corrente) === 11) {
+    } else if (secoesNominais70[11] === corrente && D3[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95.indexOf(corrente) === 11) {
+    } else if (secoesNominais95[11] === corrente && D3[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120.indexOf(corrente) === 11) {
+    } else if (secoesNominais120[11] === corrente && D3[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150.indexOf(corrente) === 11) {
+    } else if (secoesNominais150[11] === corrente && D3[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185.indexOf(corrente) === 11) {
+    } else if (secoesNominais185[11] === corrente && D3[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240.indexOf(corrente) === 11) {
+    } else if (secoesNominais240[11] === corrente && D3[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300.indexOf(corrente) === 11) {
+    } else if (secoesNominais300[11] === corrente && D3[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400.indexOf(corrente) === 11) {
+    } else if (secoesNominais400[11] === corrente && D3[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500.indexOf(corrente) === 11) {
+    } else if (secoesNominais500[11] === corrente && D3[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630.indexOf(corrente) === 11) {
+    } else if (secoesNominais630[11] === corrente && D3[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800.indexOf(corrente) === 11) {
+    } else if (secoesNominais800[11] === corrente && D3[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000.indexOf(corrente) === 11) {
+    } else if (secoesNominais1000[11] === corrente && D3[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
@@ -1356,9 +1200,7 @@ function salvar() {
       cabo != "" &&
       circuito != "" &&
       condutores_Carregados() == "2") ||
-    (condutores_Carregados() == "3" &&
-      correnteProjeto() != NaN &&
-      tipo_dispositivo() == "outro") ||
+    (condutores_Carregados() == "3" && correnteProjeto() != NaN) ||
     tipo_dispositivo() == "iluminacao" ||
     tipo_dispositivo() == "tomada"
   ) {
@@ -1366,18 +1208,16 @@ function salvar() {
     chave++;
     localStorage.setItem(chave, JSON.stringify(Array));
     console.log(Array);
-      Swal.fire({
-    title: "Pojeto Salvo com sucesso",
-    text: "",
-    icon: "success",
-  });
-  }else{
-   Swal.fire({
-    title: "Voce deve preencher todas as lacunas para salvar seu projeto",
-    text: "Oops...",
-    icon: "error",
-  });
+    Swal.fire({
+      title: "Pojeto Salvo com sucesso",
+      text: "",
+      icon: "success",
+    });
+  } else {
+    Swal.fire({
+      title: "Voce deve preencher todas as lacunas para salvar seu projeto",
+      text: "Oops...",
+      icon: "error",
+    });
+  }
 }
-  
-}
-
