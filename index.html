@@ -106,7 +106,106 @@
                 <option value="3">Condutores Carregados 3</option>
               </select>
             </label>
+
+            <label
+              >Agrupamento
+              <select
+                class="form-select-sm form-select entrada"
+                onchange="agrupamento_condutores(this.value)"
+                id="agrupamento_condutores"
+                aria-label=".form-select-sm example"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9/11</option>
+                <option value="12">12/15</option>
+                <option value="16">16/19</option>
+                <option value="20">T20</option>
+              </select>
+            </label>
+
+            <label
+              >Forma de agrupamento dos condutores
+              <select
+                class="form-select-sm form-select entrada"
+                onchange="agrupamento_condutores(this.value)"
+                id="forma_agrupamento_condutores"
+                aria-label=".form-select-sm example"
+              >
+                <option value="1">
+                  Em feixe: ao ar livre ou sobre superfície; embutidos; em
+                  conduto fechado
+                </option>
+                <option value="2">
+                  Camada única sobre parede, piso, ou em bandeja não perfurada
+                  ou prateleira
+                </option>
+                <option value="3">Camada única no teto</option>
+                <option value="4">Camada única em bandeja perfurada</option>
+                <option value="5">
+                  Camada única sobre leito, suporte etc.
+                </option>
+              </select>
+            </label>
           </div>
+        </div>
+        <br />
+
+        <div class="col inputs">
+          <label
+            >Temperatura ºC Ambiente
+            <select
+              class="form-select-sm form-select entrada"
+              onchange="agrupamento_condutores(this.value)"
+              id="temperatura_Ambiente"
+              aria-label=".form-select-sm example"
+            >
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+              <option value="60">60</option>
+              <option value="65">65</option>
+              <option value="70">70</option>
+              <option value="75">75</option>
+              <option value="80">80</option>
+            </select>
+          </label>
+          <label
+            >Temperatura ºC Solo ou Ambiente
+            <select
+              class="form-select-sm form-select entrada"
+              onchange="agrupamento_condutores(this.value)"
+              id="ambiente"
+              aria-label=".form-select-sm example"
+            >
+              <option value="ambiente">Ambiente</option>
+              <option value="solo">Solo</option>
+            </select>
+          </label>
+          <label
+            >Tipo de protecao cabo
+            <select
+              class="form-select-sm form-select entrada"
+              onchange="agrupamento_condutores(this.value)"
+              id="isolamento"
+              aria-label=".form-select-sm example"
+            >
+              <option value="pvc">PVC</option>
+              <option value="EPR_XLPE">EPR ou XLPE</option>
+            </select>
+          </label>
         </div>
 
         <label>Método de instalação</label>
@@ -371,9 +470,9 @@
         </div>
       </div>
 
-       <div
+      <div
         class="modal fade"
-         id="CEF"
+        id="CEF"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabindex="-1"
@@ -384,7 +483,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">
-              Esquema ilustrativo C/D
+                Esquema ilustrativo C/D
               </h5>
               <button
                 type="button"

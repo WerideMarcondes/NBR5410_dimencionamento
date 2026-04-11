@@ -16,6 +16,7 @@ body {
 
 .container {
   background-color: #e6e6fa;
+  height: 700px;
 }
 
 .input-group {
@@ -44,22 +45,54 @@ body {
 }
 /*Selects */
 #tipoDispositivo {
-  width: 250px;
+  width: 100px;
   font-weight: bolder;
 }
+
+#forma_agrupamento_condutores{
+  width: 400px;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+label {
+  color: rgb(19, 18, 18);
+  font-weight: bolder;
+  font-size: 14px;
+  padding: 5px;
+}
+ #agrupamento_condutores{
+  width: 100px;
+  font-weight: bolder;
+ }
 
 #selectCondutores {
   width: 250px;
   font-weight: bolder;
 }
 
+#ambiente{ 
+  width: 200px;
+  font-weight: bolder;
+}
+#temperatura_Ambiente{
+ width: 100px;
+  font-weight: bolder;
+}
+
+#temperatura_Ambiente_solo{
+ width: 100px;
+  font-weight: bolder;
+}
+
+#isolamento{
+ width: 150px;
+  font-weight: bolder;
+}
 select {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bolder;
-}
-label {
-  color: black;
 }
 .select {
   height: 200px;
@@ -113,14 +146,6 @@ option:hover {
   color: black;
   border-color: black;
 }
-
-
-label {
-  color: rgb(19, 18, 18);
-  font-weight: bolder;
-  font-size: 20px;
-}
-
 .AB1 {
   background-repeat: no-repeat;
   background-size: contain;

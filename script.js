@@ -91,14 +91,376 @@ function novo_Projeto() {
   }
 }
 
-// fator de correcao
-function FatorCorrecao() {
-  var agrupamento = 0.8;
-  var temperatura = 0.94;
+// Forma de agrupamento dos condutores
+function agrupamento_condutores() {
+  var agrupamento = document.getElementById("agrupamento_condutores");
+  // console.log(agrupamento.value)
+  return agrupamento.value;
+}
 
-  var fatorCorrecao = agrupamento * temperatura;
-  //0.752
-  return fatorCorrecao;
+// metodo de execucao agrupamento dos condutores
+function metodo_agrupamento() {
+  var metodo_Utilizado = document.getElementById(
+    "forma_agrupamento_condutores",
+  );
+  // console.log(metodo_Utilizado.value)
+  return metodo_Utilizado.value;
+}
+
+// metodo de execucao agrupamento dos condutores
+function Temperatura_Ambiente() {
+  var temperartura = document.getElementById("temperatura_Ambiente");
+  var tipo_isolamento = document.getElementById("isolamento");
+  var ambiente = document.getElementById("ambiente");
+  // console.log(temperartura.value, tipo_isolamento.value, ambiente.value);
+
+  if (
+    temperartura.value >= 10 &&
+    temperartura.value <= 14.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.22);
+  } else if (
+    temperartura.value >= 15 &&
+    temperartura.value <= 19.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.17);
+  } else if (
+    temperartura.value >= 20 &&
+    temperartura.value <= 24.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.12);
+  } else if (
+    temperartura.value >= 25 &&
+    temperartura.value <= 29.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.06);
+  } else if (
+    temperartura.value >= 35 &&
+    temperartura.value <= 39.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.94);
+  } else if (
+    temperartura.value >= 40 &&
+    temperartura.value <= 44.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.87);
+  } else if (
+    temperartura.value >= 45 &&
+    temperartura.value <= 49.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.79);
+  } else if (
+    temperartura.value >= 50 &&
+    temperartura.value <= 54.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.71);
+  } else if (
+    temperartura.value >= 55 &&
+    temperartura.value <= 59.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.61);
+  } else if (
+    temperartura.value === 60 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.5);
+  } else if (
+    temperartura.value >= 61 &&
+    temperartura.value <= 80 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0);
+  }
+  if (
+    temperartura.value >= 10 &&
+    temperartura.value <= 14.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.15);
+  } else if (
+    temperartura.value >= 15 &&
+    temperartura.value <= 19.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.12);
+  } else if (
+    temperartura.value >= 20 &&
+    temperartura.value <= 24.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.08);
+  } else if (
+    temperartura.value >= 25 &&
+    temperartura.value <= 29.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 1.04);
+  } else if (
+    temperartura.value >= 35 &&
+    temperartura.value <= 39.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.96);
+  } else if (
+    temperartura.value >= 40 &&
+    temperartura.value <= 44.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.91);
+  } else if (
+    temperartura.value >= 45 &&
+    temperartura.value <= 49.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.87);
+  } else if (
+    temperartura.value >= 50 &&
+    temperartura.value <= 54.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.82);
+  } else if (
+    temperartura.value >= 55 &&
+    temperartura.value <= 59.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.76);
+  } else if (
+    temperartura.value === 60 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.71);
+  } else if (
+    temperartura.value >= 65 &&
+    temperartura.value <= 69.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.65);
+  } else if (
+    temperartura.value >= 70 &&
+    temperartura.value <= 74.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.58);
+  } else if (
+    temperartura.value >= 75 &&
+    temperartura.value <= 79.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.5);
+  } else if (
+    temperartura.value >= 80 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "ambiente"
+  ) {
+    return (Fator_temperartura = 0.41);
+  } else if (
+    temperartura.value >= 10 &&
+    temperartura.value <= 14.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.1);
+  } else if (
+    temperartura.value >= 15 &&
+    temperartura.value <= 19.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.05);
+  } else if (
+    temperartura.value >= 20 &&
+    temperartura.value <= 24.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.95);
+  } else if (
+    temperartura.value >= 25 &&
+    temperartura.value <= 29.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.89);
+  } else if (
+    temperartura.value >= 35 &&
+    temperartura.value <= 39.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.84);
+  } else if (
+    temperartura.value >= 40 &&
+    temperartura.value <= 44.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.77);
+  } else if (
+    temperartura.value >= 45 &&
+    temperartura.value <= 49.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.71);
+  } else if (
+    temperartura.value >= 50 &&
+    temperartura.value <= 54.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.63);
+  } else if (
+    temperartura.value >= 55 &&
+    temperartura.value <= 59.99 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.55);
+  } else if (
+    temperartura.value === 60 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.45);
+  } else if (
+    temperartura.value >= 61 &&
+    temperartura.value <= 80 &&
+    tipo_isolamento.value === "pvc" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0);
+  }
+  if (
+    temperartura.value >= 10 &&
+    temperartura.value <= 14.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.07);
+  } else if (
+    temperartura.value >= 15 &&
+    temperartura.value <= 19.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.04);
+  } else if (
+    temperartura.value >= 20 &&
+    temperartura.value <= 24.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.96);
+  } else if (
+    temperartura.value >= 25 &&
+    temperartura.value <= 29.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 1.93);
+  } else if (
+    temperartura.value >= 35 &&
+    temperartura.value <= 39.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.89);
+  } else if (
+    temperartura.value >= 40 &&
+    temperartura.value <= 44.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.85);
+  } else if (
+    temperartura.value >= 45 &&
+    temperartura.value <= 49.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.8);
+  } else if (
+    temperartura.value >= 50 &&
+    temperartura.value <= 54.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.76);
+  } else if (
+    temperartura.value >= 55 &&
+    temperartura.value <= 59.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.71);
+  } else if (
+    temperartura.value === 60 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.65);
+  } else if (
+    temperartura.value >= 65 &&
+    temperartura.value <= 69.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.6);
+  } else if (
+    temperartura.value >= 70 &&
+    temperartura.value <= 74.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.53);
+  } else if (
+    temperartura.value >= 75 &&
+    temperartura.value <= 79.99 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.46);
+  } else if (
+    temperartura.value >= 80 &&
+    tipo_isolamento.value === "EPR_XLPE" &&
+    ambiente.value === "solo"
+  ) {
+    return (Fator_temperartura = 0.38);
+  }
 }
 
 // Condutores carregados
@@ -124,12 +486,193 @@ function correnteProjeto() {
   var tensao = document.getElementById("tensao").value;
   var watts = document.getElementById("watts").value;
   var quantidade = document.getElementById("quantidade").value;
+  
 
   var correnteTotal = (watts * quantidade) / tensao;
 
   document.getElementById("correnteProjeto").value = innerHTML =
     correnteTotal.toFixed(0) + " A";
   return correnteTotal.toFixed(0);
+}
+
+// fator de correcao
+function FatorCorrecao() {
+  var agrupamento_cabos = agrupamento_condutores();
+  var metodo_Instalacao = metodo_agrupamento();
+  var temperatura = Temperatura_Ambiente();
+
+  if (agrupamento_cabos == 1 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 1.00 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 2 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.8 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 3 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.7 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 4 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.65 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 5 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.6 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 6 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.57 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 7 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.54 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 8 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.52 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 9 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.5 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 12 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.54 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 16 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.41 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 20 && metodo_Instalacao == 1) {
+    var fatorCorrecao = 0.38 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 1 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 1.0 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 2 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 0.85 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 3 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 0.79 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 4 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 0.75 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 5 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 0.73 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 6 ||
+    (agrupamento_cabos == 7 && metodo_Instalacao == 2)
+  ) {
+    var fatorCorrecao = 0.72 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 8 && metodo_Instalacao == 2) {
+    var fatorCorrecao = 0.71 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 9 ||
+    agrupamento_cabos == 12 ||
+    agrupamento_cabos == 16 ||
+    (agrupamento_cabos == 20 && metodo_Instalacao == 2)
+  ) {
+    var fatorCorrecao = 0.7 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 1 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.95 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 2 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.81 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 3 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.72 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 4 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.68 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 5 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.66 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 6 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.64 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 7 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.62 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 8 && metodo_Instalacao == 3) {
+    var fatorCorrecao = 0.71 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 9 ||
+    agrupamento_cabos == 12 ||
+    agrupamento_cabos == 16 ||
+    (agrupamento_cabos == 20 && metodo_Instalacao == 3)
+  ) {
+    var fatorCorrecao = 0.61 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 1 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 1.0 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 2 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 0.88 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 3 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 0.82 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 4 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 0.77 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 5 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 0.75 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 6 ||
+    (agrupamento_cabos == 7 && metodo_Instalacao == 4)
+  ) {
+    var fatorCorrecao = 0.73 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 8 && metodo_Instalacao == 4) {
+    var fatorCorrecao = 0.72 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 9 ||
+    agrupamento_cabos == 12 ||
+    agrupamento_cabos == 16 ||
+    (agrupamento_cabos == 20 && metodo_Instalacao == 4)
+  ) {
+    var fatorCorrecao = 0.72 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 1 && metodo_Instalacao == 5) {
+    var fatorCorrecao = 1.0 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 2 && metodo_Instalacao == 5) {
+    var fatorCorrecao = 0.88 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 3 && metodo_Instalacao == 5) {
+    var fatorCorrecao = 0.82 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 5 ||
+    (agrupamento_cabos == 4 && metodo_Instalacao == 5)
+  ) {
+    var fatorCorrecao = 0.8 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 6 ||
+    (agrupamento_cabos == 7 && metodo_Instalacao == 5)
+  ) {
+    var fatorCorrecao = 0.79 * temperatura;
+    return fatorCorrecao;
+  } else if (agrupamento_cabos == 8 && metodo_Instalacao == 5) {
+    var fatorCorrecao = 0.78 * temperatura;
+    return fatorCorrecao;
+  } else if (
+    agrupamento_cabos == 9 ||
+    agrupamento_cabos == 12 ||
+    agrupamento_cabos == 16 ||
+    (agrupamento_cabos == 20 && metodo_Instalacao == 4)
+  ) {
+    var fatorCorrecao = 0.78 * temperatura;
+    return fatorCorrecao;
+  }
+
+  //   var agrupamento = 0.8;
+  //   var temperatura = 0.94;
+
+  //   var fatorCorrecao = agrupamento * temperatura;
+  //   //0.752
+  //   return fatorCorrecao;
 }
 
 function capacidade_ConducaoCobre() {
@@ -243,6 +786,9 @@ function capacidade_ConducaoCobre() {
     10, 12, 15, 18, 24, 31, 39, 52, 87, 86, 103, 122, 151, 179, 203, 230, 258,
     297, 336, 39, 4445, 506, 577, 652,
   ];
+
+  console.log("fator de correcao" + FatorCorrecao());
+  // console.log("corrente projeto"+correnteProjeto())
   const correnteInicial = correnteProjeto() / FatorCorrecao();
 
   if (metodo_Instalacao() == "A1" && condutores_Carregados() == 2) {
@@ -708,8 +1254,9 @@ function capacidade_ConducaoCobre() {
     }
   }
   if (metodo_Instalacao() == "B2" && condutores_Carregados() == 2) {
+
     const corrente = B22.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
-    if (secoesNominais0005[6] === corrente && B22[0] === corrente) {
+   if (secoesNominais0005[6] === corrente && B22[0] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "0,5");
     } else if (secoesNominais0075[6] === corrente && B22[1] === corrente) {
@@ -721,70 +1268,69 @@ function capacidade_ConducaoCobre() {
     } else if (secoesNominais015[6] === corrente && B22[3] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1,5");
-    } else if (secoesNominais025[6] === corrente && B22[5] === corrente) {
+    } else if (secoesNominais025[6] === corrente && B22[4] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "2,5");
-    } else if (secoesNominais4[6] === corrente && B22[6] === corrente) {
+    } else if (secoesNominais4[6] === corrente && B22[5] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
-    } else if (secoesNominais6[6] === corrente && B22[9] === corrente) {
+    } else if (secoesNominais6[6] === corrente && B22[6] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
-    } else if (secoesNominais10[6] === corrente && B22[8] === corrente) {
+    } else if (secoesNominais10[6] === corrente && B22[7] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "10");
-    } else if (secoesNominais16[6] === corrente && B22[9] === corrente) {
+    } else if (secoesNominais16[6] === corrente && B22[8] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
-    } else if (secoesNominais25[6] === corrente && B22[10] === corrente) {
+    } else if (secoesNominais25[6] === corrente && B22[9] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
-    } else if (secoesNominais35[6] === corrente && B22[11] === corrente) {
+    } else if (secoesNominais35[6] === corrente && B22[10] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "35");
-    } else if (secoesNominais50[6] === corrente && B22[12] === corrente) {
+    } else if (secoesNominais50[6] === corrente && B22[11] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "50");
-    } else if (secoesNominais70[6] === corrente && B22[13] === corrente) {
+    } else if (secoesNominais70[6] === corrente && B22[12] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "70");
-    } else if (secoesNominais95[6] === corrente && B22[14] === corrente) {
+    } else if (secoesNominais95[6] === corrente && B22[13] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "95");
-    } else if (secoesNominais120[6] === corrente && B22[15] === corrente) {
+    } else if (secoesNominais120[6] === corrente && B22[14] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "120");
-    } else if (secoesNominais150[6] === corrente && B22[16] === corrente) {
+    } else if (secoesNominais150[6] === corrente && B22[15] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "150");
-    } else if (secoesNominais185[6] === corrente && B22[17] === corrente) {
+    } else if (secoesNominais185[6] === corrente && B22[16] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "185");
-    } else if (secoesNominais240[6] === corrente && B22[18] === corrente) {
+    } else if (secoesNominais240[6] === corrente && B22[17] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "240");
-    } else if (secoesNominais300[6] === corrente && B22[19] === corrente) {
+    } else if (secoesNominais300[6] === corrente && B22[18] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "300");
-    } else if (secoesNominais400[6] === corrente && B22[20] === corrente) {
+    } else if (secoesNominais400[6] === corrente && B22[19] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "400");
-    } else if (secoesNominais500[6] === corrente && B22[21] === corrente) {
+    } else if (secoesNominais500[6] === corrente && B22[20] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "500");
-    } else if (secoesNominais630[6] === corrente && B22[22] === corrente) {
+    } else if (secoesNominais630[6] === corrente && B22[21] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "630");
-    } else if (secoesNominais800[6] === corrente && B22[23] === corrente) {
+    } else if (secoesNominais800[6] === corrente && B22[22] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "800");
-    } else if (secoesNominais1000[6] === corrente && B22[24] === corrente) {
+    } else if (secoesNominais1000[6] === corrente && B22[23] === corrente) {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "1000");
     }
   }
   if (metodo_Instalacao() == "B2" && condutores_Carregados() == 3) {
-    console.log("correto");
     const corrente = B23.find((element) => element >= correnteInicial); // Procurando dijuntor igual a corrente ou proximo valor superior
 
     if (secoesNominais0005[7] === corrente && B23[0] === corrente) {
@@ -806,7 +1352,6 @@ function capacidade_ConducaoCobre() {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "4");
     } else if (secoesNominais6[7] === corrente && B23[6] === corrente) {
-      console.log(secoesNominais6.indexOf(corrente));
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "6");
     } else if (secoesNominais10[7] === corrente && B23[7] === corrente) {
@@ -816,7 +1361,6 @@ function capacidade_ConducaoCobre() {
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "16");
     } else if (secoesNominais25[7] === corrente && B23[9] === corrente) {
-      console.log(secoesNominais25.indexOf(corrente));
       document.getElementById("disjuntor").value = innerHTML = corrente;
       return (document.getElementById("cabo").value = innerHTML = "25");
     } else if (secoesNominais35[7] === corrente && B23[10] === corrente) {
